@@ -10,4 +10,3 @@ RUN echo "" > /etc/apk/repositories \
 && apk update && apk add --no-cache openjdk8-jre ca-certificates tzdata tini \
 && rm -rf /var/cache/apk/* \
 && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-ENTRYPOINT ["/sbin/tini", "--"]
