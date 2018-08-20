@@ -7,5 +7,5 @@ ENV LANG=C.UTF-8 \
 RUN echo "" > /etc/apk/repositories \
 && echo "https://mirrors.aliyun.com/alpine/v3.8/main/" >> /etc/apk/repositories \
 && echo "https://mirrors.aliyun.com/alpine/v3.8/community/" >> /etc/apk/repositories \
-&& apk update && apk add openjdk8-jre ca-certificates tzdata ttf-dejavu && rm -rf /var/cache/apk/* \
+&& apk update && apk add openjdk8-jre ca-certificates tzdata ttf-dejavu tini && rm -rf /var/cache/apk/* \
 && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
